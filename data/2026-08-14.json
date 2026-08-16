@@ -1,0 +1,31 @@
+{
+ "date": "2026-08-14",
+ "generated_at": "2026-08-15 21:41:44 UTC",
+ "generated_at_bj": "2026-08-16 05:41:44 北京",
+ "strict": [],
+ "proj": [],
+ "close": [],
+ "context": {
+  "last_signal": "2026-07-09",
+  "gap_days": 26,
+  "gap_max_hist": 24,
+  "gap_median_hist": 1.0,
+  "gap_pct_ge": 0.0,
+  "active_days": "129/392",
+  "funnel_total": 105,
+  "funnel": {
+   "MA30非全程向上": 82,
+   "当日收盘未低于波段高点": 12,
+   "条件3": 6,
+   "条件1": 2,
+   "条件6": 1,
+   "条件4": 1,
+   "上涨起点A未找到": 1
+  }
+ },
+ "snapshot_time": null,
+ "coverage": null,
+ "gates": {},
+ "note": null,
+ "status": "ok"
+}
