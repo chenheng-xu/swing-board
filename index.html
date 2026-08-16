@@ -114,9 +114,9 @@ footer section{margin-bottom:12px}
 
 <div class="wrap">
   <header>
-    <div class="eyebrow">方案 1 · v5</div>
+    <div class="eyebrow">方案 1</div>
     <h1>回调反弹信号板</h1>
-    <div class="tagline">放量拉升后、回调途中的反弹买点 &middot; 每交易日北京时间 14:30 自动运行</div>
+    <div class="tagline">放量拉升后回调途中的反弹信号 &middot; 每交易日北京时间 14:30 自动运行</div>
   </header>
 
   <div class="controls">
@@ -128,8 +128,8 @@ footer section{margin-bottom:12px}
 
   <footer>
     <section><b>这个页面在算什么</b><br>
-      从全部主板非 ST 股票里,找"前期放量大涨一段、目前正在浅回调、今天出现反弹迹象"的票。
-      前期波段涨幅要 &gt;40% 且末段放量;回调段要求 30 日均线全程向上、跌幅不超前期涨幅一半、
+      从全部主板非 ST 股票里,找"前期放量大涨一段、目前正在回调、今天出现反弹迹象"的票。
+      前期波段涨幅要 &gt;35% 且末段放量;回调段要求跌幅不超前期涨幅一半、
       阴线至少 4 根、任意连续 2–3 日跌幅 &lt;15%;今天需满足三个触发之一
       (放量阳线 / 涨幅 &gt;7% / 三连阳)。同一只票入选后冷却 10 个交易日。
     </section>
@@ -138,14 +138,15 @@ footer section{margin-bottom:12px}
       <b>严格</b>版只用截至此刻的实测成交额,<b>推算</b>版按比例放大。收盘前信号仍可能变化,以收盘后复跑为准。
     </section>
     <section><b>已知的局限</b><br>
-      这是规则筛选结果,不是投资建议。该策略 2025 全年只赚 0.8%、上半年亏 19.2%,全期收益几乎全部来自 2026;
-      历史最大回撤较大,且规则在同一段数据上迭代过 5 轮,存在过拟合风险。
+      这是规则筛选结果,不是投资建议。当前规则(无 MA30 限制、涨幅门槛 35%)在 2025-01 至 2026-08 的回测中,
+      持 5 日扣成本后为 <b>−25.5%</b>,只打败 28.5% 的同集中度随机组合 —— <b>历史上是亏钱的</b>。
+      作为对照,加回「回调段 MA30 全程向上」并把门槛提回 40% 后为 +294%。规则仍在评估中,请勿据此实盘。
     </section>
   </footer>
 </div>
 
 <script>
-const DATA = [{"date": "2026-08-14", "generated_at": "2026-08-16 12:41:50 UTC", "generated_at_bj": "2026-08-16 20:41:50 北京", "strict": [], "proj": [], "close": [], "context": {"last_signal": "2026-07-09", "gap_days": 26, "gap_max_hist": 24, "gap_median_hist": 1.0, "gap_pct_ge": 0.0, "active_days": "129/392", "funnel_total": 105, "funnel": {"MA30非全程向上": 82, "当日收盘未低于波段高点": 12, "条件3": 6, "条件1": 2, "条件6": 1, "条件4": 1, "上涨起点A未找到": 1}}, "snapshot_time": null, "coverage": null, "gates": {}, "note": null, "status": "ok"}];
+const DATA = [{"date": "2026-08-14", "generated_at": "2026-08-16 14:06:52 UTC", "generated_at_bj": "2026-08-16 22:06:52 北京", "strict": [], "proj": [], "close": [], "context": {"last_signal": "2026-08-06", "gap_days": 6, "gap_max_hist": 6, "gap_median_hist": 0.0, "gap_pct_ge": 0.4484304932735426, "active_days": "224/392", "funnel_total": 105, "funnel": {"条件1": 53, "条件4": 18, "条件3": 14, "当日收盘未低于波段高点": 12, "上涨累计≤40%": 3, "上涨起点A未找到": 2, "条件6": 2, "条件2": 1}}, "snapshot_time": null, "coverage": null, "gates": {}, "note": null, "status": "ok"}];
 
 const $ = id => document.getElementById(id);
 const fmt = v => (v === null || v === undefined || v === '') ? '—' : v;
