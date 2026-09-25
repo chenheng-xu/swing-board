@@ -1,0 +1,21 @@
+{
+ "date": "2026-09-25",
+ "generated_at": "2026-09-25 07:10:03 UTC",
+ "generated_at_bj": "2026-09-25 15:10:03 北京",
+ "strict": [],
+ "proj": [],
+ "close": [],
+ "context": {
+  "last_signal": "2026-08-06",
+  "gap_days": 35,
+  "gap_max_hist": 6,
+  "gap_median_hist": 0.0,
+  "gap_pct_ge": 0.0,
+  "active_days": "224/421"
+ },
+ "snapshot_time": null,
+ "coverage": null,
+ "gates": {},
+ "note": null,
+ "status": "非交易日"
+}
